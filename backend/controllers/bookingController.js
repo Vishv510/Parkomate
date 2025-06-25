@@ -1,4 +1,4 @@
-import Booking from "../model/Booking";
+import {Booking} from "../model/Booking.js";
 
 const createBooking = async (req, res) => {
     const { parkingLotId, slotId , startTime, endTime } = req.body;
@@ -30,7 +30,7 @@ const getUserBookings = async (req, res) => {
     res.json(bookings);
 }
 
-module.exports = {
+export {
     createBooking,
     getUserBookings
 }

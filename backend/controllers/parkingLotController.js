@@ -1,4 +1,4 @@
-import ParkingLot from "../model/ParkingLot";
+import {ParkingLot} from "../model/ParkingLot.js";
 
 const createParkingLot = async (req, res) => {
     const { name, address, totalSlots } = req.body;
@@ -49,4 +49,4 @@ const getNearbyParkingLots = async (req, res) => {
     }
 }
 
-module.exports = {createParkingLot, getNearbyParkingLots};
+export {createParkingLot, getNearbyParkingLots};

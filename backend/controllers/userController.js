@@ -1,8 +1,6 @@
-import User from "../model/User";
+import {User} from "../model/User.js";
 
-const getProfile = async (req, res) => {
+export const getProfile = async (req, res) => {
     const user = await User.findById(req.user.id).select("-password");
     res.json(user);
 };
-
-module.exports = { getProfile }

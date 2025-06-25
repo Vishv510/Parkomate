@@ -1,10 +1,10 @@
 import express from  "express";
-import { createParkingLot, getNearbyParkingLots } from "../controllers/parkingLotController";
-import auth from "../middlewares/authMiddleware";
+import { createParkingLot, getNearbyParkingLots } from "../controllers/parkingLotController.js";
+import auth from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
 router.post("/", auth , createParkingLot);
 router.get('"/nearby', getNearbyParkingLots);
 
-module.exports = router;
+export const parkingLotRoutes = router;

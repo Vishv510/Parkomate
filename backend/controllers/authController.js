@@ -1,10 +1,10 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import User from "../model/User";
+import {User} from "../model/User.js";
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
-const register = async (req, res) => {
+export const register = async (req, res) => {
     const { name, email, password, role} = req.body;
 
     try{
@@ -27,7 +27,7 @@ const register = async (req, res) => {
     }
 }
 
-const login = async (req, res) => {
+export const login = async (req, res) => {
     const { email, password } = req.body;
     try{
         const user = await User.findOne({ email });
@@ -47,5 +47,3 @@ const login = async (req, res) => {
         console.error(error);
     }
 }
-
-module.exports = { register, login};

@@ -1,4 +1,4 @@
-import mongoose, { Schema } from mongoose;
+import mongoose, { Schema } from 'mongoose';
 
 const bookingShema = new Schema({
     userId: {type: Schema.Types.ObjectId, ref : "User"},
@@ -9,4 +9,4 @@ const bookingShema = new Schema({
     status: {type: String, enum: ['reserved', "completed", "cancelled"]}
 })
 
-module.exports = mongoose.model("Booking", bookingShema);
+export const Booking = mongoose.model("Booking", bookingShema);

@@ -1,11 +1,11 @@
 import express from "express";
-import connectDB from "./config/dataBase";
+import connectDB from "./config/dataBase.js";
 import cors from "cors";
 import dotenv from "dotenv";
-import authRoutes from "./routes/authRoutes";
-import userRoutes from "./routes/userRoutes";
-import parkingLotRoutes from "./routes/parkingLotRoutes";
-import bookingRoutes from "./routes/bookingRoutes";
+import {authRoutes} from "./routes/authRoutes.js";
+import {userRoutes} from "./routes/userRoutes.js";
+import {parkingLotRoutes} from "./routes/parkingLotRoutes.js";
+import {bookingRoutes} from "./routes/bookingRoutes.js";
 
 
 

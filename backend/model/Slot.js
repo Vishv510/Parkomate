@@ -6,4 +6,4 @@ const slotSchema = new Schema({
     isOccupied: {type: Boolean, default: false},
 });
 
-module.exports = mongoose.model("Slot", slotSchema);
+export const Slot = mongoose.model("Slot", slotSchema);
