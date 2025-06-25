@@ -5,7 +5,11 @@ const parkingLotSchema = new Schema({
     name: String,
     address: String,
     totalSlots: Number,
-    allocatedSlots: Number
+    allocatedSlots: Number,
+    location: {
+        type: String,
+        coordinates: [Number]
+    }
 })
 
 module.exports = mongoose.model('ParkingLot', ParkingLotSchema);
